@@ -6,24 +6,106 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:id="@+id/clickToUploadImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <Button
-        android:id="@+id/btnUpload"
+        android:id="@+id/btnImgae1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Tại máy"
+        app:layout_constraintBottom_toTopOf="@+id/imageResult"
+        app:layout_constraintEnd_toStartOf="@+id/btnImgae2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clickToUploadImg" />
+
+    <Button
+        android:id="@+id/btnImgae2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trên Cloud"
+        app:layout_constraintBottom_toTopOf="@+id/imageResult"
+        app:layout_constraintEnd_toStartOf="@+id/btnImgae3"
+        app:layout_constraintStart_toEndOf="@+id/btnImgae1"
+        app:layout_constraintTop_toBottomOf="@+id/clickToUploadImg" />
+
+    <Button
+        android:id="@+id/btnImgae3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trên Server"
+        app:layout_constraintBottom_toTopOf="@+id/imageResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnImgae2"
+        app:layout_constraintTop_toBottomOf="@+id/clickToUploadImg" />
+
+    <TextView
+        android:id="@+id/imageResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnImgae3" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@+id/imageResult" />
+
+    <EditText
+        android:id="@+id/numbern"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/btnnqueenp1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nqueenresult"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+    <TextView
+        android:id="@+id/nqueenresult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/numbern"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageResult" />
+
+    <Button
+        android:id="@+id/btnnqueenp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tại máy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nqueenresult"
+        app:layout_constraintTop_toBottomOf="@+id/numbern" />
+
+    <Button
+        android:id="@+id/btnnqueenp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trên Cloud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nqueenresult"
+        app:layout_constraintTop_toBottomOf="@+id/btnnqueenp1" />
+
+    <Button
+        android:id="@+id/btnnqueenp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trên Server"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nqueenresult"
+        app:layout_constraintTop_toBottomOf="@+id/btnnqueenp2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
