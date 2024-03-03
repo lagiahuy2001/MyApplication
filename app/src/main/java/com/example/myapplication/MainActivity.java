@@ -44,8 +44,8 @@ import java.io.UnsupportedEncodingException;
 import org.json.JSONException;
 
 public class MainActivity extends AppCompatActivity {
-    final String URL_BACK_END = "https://29fb-14-177-70-127.ngrok-free.app";
-    final String URL_CLOUD = "https://nasty-roses-sort.loca.lt";
+    final String URL_BACK_END = "https://3fd9-2402-800-62d0-6fc2-431d-8dc3-ae4f-4772.ngrok-free.app";
+    final String URL_CLOUD = "https://witty-pigs-invite.loca.lt";
     private TessBaseAPI tessBaseAPI;
     private TextView imageResult;
     private TextView nqueenResult;
